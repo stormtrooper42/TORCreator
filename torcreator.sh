@@ -13,7 +13,7 @@ echo "Let's go to the deep baby !"
 echo "##### INSTALL NGINX #####"
 mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.origin
 wget https://gist.githubusercontent.com/stormtrooper42/d90ac037559f0c8788f0/raw/2ee860d4192233cbe6bec52091d1b78fbc694c30/nginx.conf 
-mv nginx /etc/nginx/nginx.conf
+mv nginx.conf /etc/nginx/nginx.conf
 rm -rf /etc/nginx/sites-available/default
 wget https://gist.githubusercontent.com/stormtrooper42/2d76408ce75c7f4f0c71/raw/ba7f5acd600b011544c70f936b6bb79acdbbc656/default
 mv default /etc/nginx/sites-available/default
@@ -48,6 +48,7 @@ echo "FIREWALL CONFIG"
 apt-get install ufw -y
 ufw allow ssh
 ufw enable
+service tor restart
 echo "WGET REMOVE"
 apt-get remove wget -y
 echo "IF YOU WANT WGET JUST "
