@@ -26,10 +26,7 @@ apt-get remove --purge exim -y
 apt-get remove --purge postfix -y
 apt-get remove --purge sendmail -y
 
-echo "WGET REMOVE"
-apt-get remove wget -y
-echo "IF YOU WANT WGET JUST "
-echo "apt-get install wget"
+
 echo "#################################"
 echo "##         INSTALLING TOR      ##"
 echo "#################################"
@@ -49,6 +46,10 @@ echo "FIREWALL CONFIG"
 apt-get install ufw -y
 ufw allow ssh
 ufw enable
+echo "WGET REMOVE"
+apt-get remove wget -y
+echo "IF YOU WANT WGET JUST "
+echo "apt-get install wget"
 echo "YOUR .ONION WEBSITE PRIVATE KEY"
 cat /var/lib/tor/hidden_service/private_key
 echo "YOUR .ONION WEBSITE"
