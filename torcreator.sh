@@ -3,7 +3,10 @@
 #MADE BY STORMTROOPER42 
 #
 #
-
+if [[ "$EUID" -ne 0 ]]; then
+	echo "Sorry, you need to run this as root"
+	exit 1
+fi
 apt-get update && apt-get upgrade -y && apt-get remove --purge apache2 -y && apt-get install nginx -y
 
 echo "Let's go to the deep baby !"
