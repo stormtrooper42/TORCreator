@@ -48,6 +48,8 @@ echo "FIREWALL CONFIG"
 apt-get install ufw -y
 ufw allow ssh
 ufw enable
+mkdir /usr/share/nginx/www
+touch /usr/share/nginx/www/index.html
 service tor restart
 echo "WGET REMOVE"
 apt-get remove wget -y
